@@ -1,5 +1,5 @@
 import { Navbar } from "./components";
-import { Home } from "./pages";
+import { Category, Home } from "./pages";
 import { useGeneralStoe } from "./utils/zustand/general-store";
 import type { JSX } from "react";
 import "./App.css";
@@ -9,7 +9,10 @@ interface Page {
   element: JSX.Element;
 }
 
-const pages: Page[] = [{ name: "Home", element: <Home /> }];
+const pages: Page[] = [
+  { name: "Home", element: <Home /> },
+  { name: "Category", element: <Category /> },
+];
 
 function App() {
   const currentPage = useGeneralStoe((state) => state.currentPage);
