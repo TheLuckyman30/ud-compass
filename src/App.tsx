@@ -1,13 +1,14 @@
 import { useState, type JSX } from "react";
-import "./App.css";
 import { Navbar } from "./components";
+import { Home } from "./pages";
+import "./App.css";
 
 interface Page {
   name: string;
   element: JSX.Element;
 }
 
-const pages: Page[] = [];
+const pages: Page[] = [{ name: "Home", element: <Home /> }];
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(pages[0]);
@@ -22,6 +23,9 @@ function App() {
           UDCompass
         </button>
       </Navbar>
+      <div className="pt-20 w-full sm:max-w-[80%] mx-auto px-5">
+        {currentPage.element}
+      </div>
     </div>
   );
 }
