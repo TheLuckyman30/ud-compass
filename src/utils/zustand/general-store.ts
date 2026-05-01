@@ -1,19 +1,18 @@
 import { create } from "zustand";
-import type { Category, Page } from "../";
+import type { Category } from "../";
 import resources from "../../data/resources.json";
-import { pages } from "../../App";
 
 interface GeneralStore {
-  currentPage: Page;
+  currentPage: number;
   selectedCategory: Category;
-  setCurrentPage: (newPage: Page) => void;
+  setCurrentPage: (newPage: number) => void;
   setSelectedCategory: (newCategory: Category) => void;
 }
 
 export const useGeneralStoe = create<GeneralStore>((set) => ({
-  currentPage: pages[0],
+  currentPage: 0,
   selectedCategory: resources[0],
-  setCurrentPage: (newPage: Page) => {
+  setCurrentPage: (newPage: number) => {
     set({ currentPage: newPage });
   },
   setSelectedCategory: (newCategory: Category) => {

@@ -8,7 +8,7 @@ export function Home() {
         <p className="font-medium text-3xl text-gray">CATEGORIES</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {resources.map((resource) => (
-            <CategoryCard categoryName={resource.name} />
+            <CategoryCard category={resource} />
           ))}
         </div>
       </div>
