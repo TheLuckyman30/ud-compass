@@ -1,14 +1,10 @@
-import { useState, type JSX } from "react";
+import { useState } from "react";
 import { Navbar } from "./components";
 import { Home } from "./pages";
+import type { Page } from "./utils";
 import "./App.css";
 
-interface Page {
-  name: string;
-  element: JSX.Element;
-}
-
-const pages: Page[] = [{ name: "Home", element: <Home /> }];
+export const pages: Page[] = [{ name: "Home", element: <Home /> }];
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(pages[0]);
