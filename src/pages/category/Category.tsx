@@ -1,3 +1,4 @@
+import { ItemCard } from "../../components";
 import { useGeneralStoe } from "../../utils/zustand/general-store";
 
 export function Category() {
@@ -10,7 +11,7 @@ export function Category() {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {selectedCategory.items.map((item) => (
-          <div>{item.title}</div>
+          <ItemCard item={item} />
         ))}
       </div>
     </section>
