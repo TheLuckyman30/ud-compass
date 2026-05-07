@@ -1,5 +1,5 @@
 import { Navbar } from "./components";
-import { Category, Home } from "./pages";
+import { Category, Home, Resoruce } from "./pages";
 import { useGeneralStoe } from "./utils/zustand/general-store";
 import type { JSX } from "react";
 import "./App.css";
@@ -12,6 +12,7 @@ interface Page {
 const pages: Page[] = [
   { name: "Home", element: <Home /> },
   { name: "Category", element: <Category /> },
+  { name: "Resource", element: <Resoruce /> },
 ];
 
 function App() {
