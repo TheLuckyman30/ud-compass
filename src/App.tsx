@@ -1,4 +1,4 @@
-import { Navbar } from "./components";
+import { Navbar, Search } from "./components";
 import { Category, Home, Resoruce } from "./pages";
 import { useGeneralStoe } from "./utils/zustand/general-store";
 import type { JSX } from "react";
@@ -28,6 +28,7 @@ function App() {
         >
           UDCompass
         </button>
+        <Search />
       </Navbar>
       <div className="pt-20 w-full sm:max-w-[80%] mx-auto px-5">
         {pages[currentPage].element}
