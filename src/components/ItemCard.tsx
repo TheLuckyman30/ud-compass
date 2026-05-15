@@ -20,8 +20,8 @@ export function ItemCard({ item }: ItemCardProps) {
       }}
     >
       <div>
-        <p className="item-title">{item.title}</p>
-        {item.subtitle && <p className="item-subtitle">{item.subtitle}</p>}
+        <p className="ic-item-title">{item.title}</p>
+        {item.subtitle && <p className="ic-item-subtitle">{item.subtitle}</p>}
       </div>
     </div>
   );

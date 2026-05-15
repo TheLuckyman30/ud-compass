@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@reference "@css/themes/color-themes.css";
 
 :root {
   font-synthesis: none;

@@ -21,7 +21,7 @@
   overflow-hidden;
 }
 
-.content-container {
+.cc-content-container {
   @apply flex 
   items-center 
   justify-center 
@@ -29,12 +29,12 @@
   gap-5;
 }
 
-.svg {
+.cc-svg {
   @apply w-10 
   h-10 
   text-ud-blue;
 }
 
-.text {
+.cc-text {
   @apply text-center;
 }

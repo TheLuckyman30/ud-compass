@@ -1,4 +1,5 @@
 import type { Item } from "@utils/interfaces";
+import "@css/components/item-info.css";
 
 interface ItemInfoProps {
   item: Item;
@@ -6,25 +7,26 @@ interface ItemInfoProps {
 
 export function ItemInfo({ item }: ItemInfoProps) {
   return (
-    <div className="bg-white rounded-sm border border-gray-400 px-5 py-10 shadow-md">
-      <p className="font-bold text-2xl">{item.title}</p>
-      <p className="text-sm text-gray italic">{item.subtitle}</p>
-      <br />
-      <div>
-        <span className="font-semibold">Roles:</span>{" "}
-        <span className="text-sm text-gray italic">{item.audience}</span>
+    <div className="item-info-card">
+      <div className="iic-header">
+        <h1 className="iic-item-title">{item.title}</h1>
+        {item.subtitle && <p className="iic-item-subtitle">{item.subtitle}</p>}
       </div>
-      <br />
-      <div>
-        <span className="font-semibold text-lg">Description</span>
-        <p>{item.description}</p>
+      <div className="iic-main-content">
+        <div>
+          <p className="iic-audience-header">Audience</p>
+          <div className="iic-audience-chip">{item.audience}</div>
+        </div>
+        <div>
+          <h2 className="iic-description-header">Description</h2>
+          <p className="iic-description">{item.description}</p>
+        </div>
       </div>
-      <br />
-      <a href={item.link} target="_blank">
-        <button className="p-2 bg-ud-darkBlue rounded-md text-white font-medium shadow-md cursor-pointer hover:scale-105 duration-75">
-          Go To
-        </button>
-      </a>
+      <div className="iic-link-container">
+        <a href={item.link} target="_blank">
+          <button className="iic-link">Go Now →</button>
+        </a>
+      </div>
     </div>
   );
 }

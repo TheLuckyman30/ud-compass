@@ -19,13 +19,13 @@
   min-h-32;
 }
 
-.item-title {
-  @apply text-lg
+.ic-item-title {
+  @apply text-lg 
   font-semibold
   text-gray-800;
 }
 
-.item-subtitle {
+.ic-item-subtitle {
   @apply text-sm
   text-gray-500
   italic

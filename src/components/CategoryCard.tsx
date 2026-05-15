@@ -21,9 +21,9 @@ export function CategoryCard({ category }: CategoryCardProps) {
         setCurrentPage(PAGES.Category);
       }}
     >
-      <div className="content-container">
+      <div className="cc-content-container">
         <svg
-          className="svg"
+          className="cc-svg"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -37,7 +37,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
           <rect x="3" y="14" width="7" height="7" />
           <rect x="14" y="14" width="7" height="7" />
         </svg>
-        <span className="text">{category.name}</span>
+        <span className="cc-text">{category.name}</span>
       </div>
     </div>
   );

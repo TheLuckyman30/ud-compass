@@ -1,0 +1,88 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.item-info-card {
+  @apply bg-white 
+  rounded-2xl 
+  border 
+  border-gray-200 
+  p-8 
+  shadow-lg 
+  max-w-4xl 
+  mx-auto;
+}
+
+.iic-header {
+  @apply pb-5;
+}
+
+.iic-item-title {
+  @apply text-3xl 
+  font-bold 
+  text-gray-800;
+}
+
+.iic-item-subtitle {
+  @apply text-gray-500 
+  italic 
+  mt-2 
+  text-lg;
+}
+
+.iic-main-content {
+  @apply mt-6 
+  flex 
+  flex-col 
+  gap-10;
+}
+
+.iic-audience-header {
+  @apply text-lg 
+  font-semibold 
+  text-gray-500 
+  mb-2;
+}
+
+.iic-audience-chip {
+  @apply inline-flex 
+  items-center 
+  rounded-full 
+  bg-blue-50 
+  px-4 
+  py-2 
+  text-sm 
+  font-medium 
+  text-ud-darkBlue 
+  border 
+  border-blue-200;
+}
+
+.iic-description-header {
+  @apply text-xl 
+  font-semibold 
+  text-gray-800 
+  mb-3;
+}
+
+.iic-description {
+  @apply text-gray-700;
+}
+
+.iic-link-container {
+  @apply mt-8 
+  flex 
+  justify-end;
+}
+
+.iic-link {
+  @apply bg-ud-darkBlue 
+  text-white 
+  font-medium 
+  px-5 
+  py-3 
+  rounded-xl 
+  shadow-sm hover:shadow-md 
+  hover:-translate-y-0.5 
+  duration-150 
+  cursor-pointer;
+}
