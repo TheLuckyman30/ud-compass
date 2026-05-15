@@ -14,8 +14,7 @@ interface GeneralStore {
   setCurrentPage: (newPage: () => JSX.Element | null) => void;
   setSelectedCategory: (newCategoryId: string) => void;
   setSelectedItem: (newItemId: string) => void;
-  addFavItem: (itemId: ItemId, item: Item) => void;
-  removeFavItem: (itemId: ItemId) => void;
+  updateFavItems: (itemId: ItemId) => void;
 }
 
 export const useGeneralStore = create<GeneralStore>((set) => {
@@ -37,18 +36,19 @@ export const useGeneralStore = create<GeneralStore>((set) => {
     setSelectedItem: (newItemId: string) => {
       set({ selectedItemId: newItemId });
     },
-    addFavItem: (itemId: ItemId, item: Item) => {
+    updateFavItems: (itemId: ItemId) => {
       set((state) => {
         const newFavoriteItems = new Map(state.favoriteItems);
-        newFavoriteItems.set(itemId, item);
+        const hasItem = newFavoriteItems.has(itemId);
 
-        return { favoriteItems: newFavoriteItems };
-      });
-    },
-    removeFavItem: (itemId: ItemId) => {
-      set((state) => {
-        const newFavoriteItems = new Map(state.favoriteItems);
-        newFavoriteItems.delete(itemId);
+        if (hasItem) {
+          newFavoriteItems.delete(itemId);
+        } else {
+          const item = state.allItems.get(itemId);
+          if (item) {
+            newFavoriteItems.set(itemId, item);
+          }
+        }
 
         return { favoriteItems: newFavoriteItems };
       });
