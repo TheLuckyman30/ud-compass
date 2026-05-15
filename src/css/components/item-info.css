@@ -16,6 +16,11 @@
   @apply pb-5;
 }
 
+.iic-title-container {
+  @apply flex 
+  justify-between;
+}
+
 .iic-item-title {
   @apply text-3xl 
   font-bold 

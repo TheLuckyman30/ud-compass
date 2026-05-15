@@ -1,6 +1,9 @@
-import type { Item } from "./";
+export type CategoryId = string;
 
 export interface Category {
+  id: CategoryId;
   name: string;
-  items: Item[];
+  items: Set<string>;
 }
+
+export type CategoryMap = Map<CategoryId, Category>;

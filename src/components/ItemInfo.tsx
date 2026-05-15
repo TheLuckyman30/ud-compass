@@ -1,4 +1,6 @@
 import type { Item } from "@utils/interfaces";
+import { ColorHeart } from "./ColorHeart";
+import { useGeneralStore } from "@utils/zustand";
 import "@css/components/item-info.css";
 
 interface ItemInfoProps {
@@ -6,10 +8,24 @@ interface ItemInfoProps {
 }
 
 export function ItemInfo({ item }: ItemInfoProps) {
+  const favoriteItems = useGeneralStore((state) => state.favoriteItems);
+  const updateFavItems = useGeneralStore((state) => state.updateFavItems);
+  const isFavorited = favoriteItems.has(item.id);
+
+  const handleFavUpdate = () => {
+    updateFavItems(item.id);
+  };
+
   return (
     <div className="item-info-card">
       <div className="iic-header">
-        <h1 className="iic-item-title">{item.title}</h1>
+        <div className="iic-title-container">
+          <h1 className="iic-item-title">{item.title}</h1>
+          <div onClick={handleFavUpdate}>
+            <ColorHeart fillColor={isFavorited} />
+          </div>
+        </div>
+
         {item.subtitle && <p className="iic-item-subtitle">{item.subtitle}</p>}
       </div>
       <div className="iic-main-content">

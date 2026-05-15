@@ -1,11 +1,11 @@
 import { Navbar, Search } from "@components";
-import { useGeneralStoe } from "@utils/zustand";
+import { useGeneralStore } from "@utils/zustand";
 import { PAGES } from "@utils/constants";
 import "./App.css";
 
 function App() {
-  const CurrentPage = useGeneralStoe((state) => state.currentPage);
-  const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
+  const CurrentPage = useGeneralStore((state) => state.currentPage);
+  const setCurrentPage = useGeneralStore((state) => state.setCurrentPage);
 
   return (
     <div className="app">

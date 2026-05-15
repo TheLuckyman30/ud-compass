@@ -1,1 +1,1 @@
-export { useGeneralStoe } from "./general-store";
+export { useGeneralStore } from "./general-store";

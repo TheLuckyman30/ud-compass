@@ -1,35 +1,31 @@
 import { Select } from "@mantine/core";
-import resources from "@data/resources.json";
-import { useGeneralStoe } from "@utils/zustand";
+import { useGeneralStore } from "@utils/zustand";
 import { PAGES } from "@utils/constants";
-import type { Item } from "@utils/interfaces";
+import type { ItemId } from "@utils/interfaces";
 import "@mantine/core/styles.css";
 
 interface SearchItem {
-  value: number;
+  value: ItemId;
   label: string;
 }
 
 export function Search() {
-  const setSelectedItem = useGeneralStoe((state) => state.setSelectedItem);
-  const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
-  const searchMap = new Map<number, Item>();
-  const allItems: SearchItem[] = [];
-  let index = 0;
-  resources.forEach((resource) =>
-    resource.items.forEach((item) => {
-      const newSearchItem = { value: index, label: item.title };
-      searchMap.set(index, item);
-      allItems.push(newSearchItem);
-      index++;
-    }),
-  );
+  const allItems = useGeneralStore((state) => state.allItems);
+  const setSelectedItem = useGeneralStore((state) => state.setSelectedItem);
+  const setCurrentPage = useGeneralStore((state) => state.setCurrentPage);
+  const itemArray = Array.from(allItems.values());
 
-  const handleChange = (value: number | null) => {
+  const searchArray: SearchItem[] = [];
+  itemArray.forEach((item) => {
+    const newSearchItem: SearchItem = { value: item.id, label: item.title };
+    searchArray.push(newSearchItem);
+  });
+
+  const handleChange = (value: ItemId | null) => {
     if (value) {
-      const selectedItem = searchMap.get(value);
+      const selectedItem = allItems.get(value);
       if (selectedItem) {
-        setSelectedItem(selectedItem);
+        setSelectedItem(selectedItem.id);
         setCurrentPage(PAGES.Resource);
       }
     }
@@ -38,7 +34,7 @@ export function Search() {
   return (
     <Select
       placeholder="Search"
-      data={allItems}
+      data={searchArray}
       searchable
       onChange={(value) => handleChange(value)}
     />

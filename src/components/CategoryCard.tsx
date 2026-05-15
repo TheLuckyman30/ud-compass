@@ -1,4 +1,4 @@
-import { useGeneralStoe } from "@utils/zustand";
+import { useGeneralStore } from "@utils/zustand";
 import type { Category } from "@utils/interfaces";
 import { PAGES } from "@utils/constants";
 import "@css/components/category-card.css";
@@ -8,16 +8,16 @@ interface CategoryCardProps {
 }
 
 export function CategoryCard({ category }: CategoryCardProps) {
-  const setSelectedCategory = useGeneralStoe(
+  const setSelectedCategory = useGeneralStore(
     (state) => state.setSelectedCategory,
   );
-  const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
+  const setCurrentPage = useGeneralStore((state) => state.setCurrentPage);
 
   return (
     <div
       className="category-card"
       onClick={() => {
-        setSelectedCategory(category);
+        setSelectedCategory(category.id);
         setCurrentPage(PAGES.Category);
       }}
     >
