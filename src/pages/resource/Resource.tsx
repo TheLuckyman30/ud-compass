@@ -1,18 +1,19 @@
 import { ItemInfo } from "@components";
 import { PAGES } from "@utils/constants";
 import { useGeneralStoe } from "@utils/zustand";
+import "@css/pages/resource.css";
 
 export function Resource() {
   const selectedItem = useGeneralStoe((state) => state.selectedItem);
   const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
 
   return (
-    <div className="flex flex-col max-w-7xl mx-auto gap-5">
+    <div className="resource">
       <button
-        className="p-2 text-xs bg-ud-darkBlue rounded-md text-white font-medium shadow-md cursor-pointer hover:scale-105 duration-75 w-fit"
+        className="res-back"
         onClick={() => setCurrentPage(PAGES.Category)}
       >
-        Go Back
+        ← Go Back
       </button>
       <ItemInfo item={selectedItem} />
     </div>
