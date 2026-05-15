@@ -15,6 +15,12 @@
   gap-5;
 }
 
+.h-no-fav-text {
+  @apply text-xl 
+  font-semibold 
+  text-gray-500;
+}
+
 .h-header {
   @apply font-bold 
   text-3xl 

@@ -9,6 +9,7 @@
 
 .app-main-button {
   @apply font-medium 
+  text-xl
   cursor-pointer 
   hover:scale-105 
   duration-75;
