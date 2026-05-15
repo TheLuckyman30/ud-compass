@@ -18,7 +18,7 @@ function App() {
         </button>
         <Search />
       </Navbar>
-      <div className="pt-20 w-full sm:max-w-[80%] mx-auto px-5">
+      <div className="pt-20 w-full sm:max-w-[80%] mx-auto p-5">
         <CurrentPage />
       </div>
     </div>
