@@ -14,7 +14,7 @@ The csv files created were then combined and put into a Microsoft Sharepoint, so
 The agent itself was created using Microsoft Copilot Studio and uses the GPT-4.1 model to generate responses. The sharepoint we created is linked to the agent as one of its knowledge sources. Additionally, we provided detailed instructions to the bot explaining what its role is, how to access all of the resources, how to format responses, etc… All testing was done on Microsoft Copilot Studio as it has an integrated chat terminal for interacting with the agent.
 \
 \
-Finally, a website mockup was designed and developed to serve as a functional prototype on what a redesigned MyUD would look like. We started off by creating several Figma prototypes to work out the design of our website. We then translated this into a small working prototype utilizing React, TypeScript, HTML, CSS, and Mantine UI as the main component library.
+Finally, a website mockup was designed and developed to serve as a functional prototype on what a redesigned MyUD would look like. We started off by creating several Figma prototypes to work out the design of our websites, which resulted in going through around 4 iterations overall for both website UI and chatbot implementation. We then translated this into a small working prototype utilizing React, TypeScript, HTML, CSS, and Mantine UI as the main component library.
 
 
 # Obstacles
