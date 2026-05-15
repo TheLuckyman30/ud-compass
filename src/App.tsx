@@ -8,17 +8,17 @@ function App() {
   const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
 
   return (
-    <div className="w-screen min-h-screen bg-lightGray">
+    <div className="app">
       <Navbar>
         <button
-          className="font-medium cursor-pointer hover:scale-105 duration-75"
+          className="app-main-button"
           onClick={() => setCurrentPage(PAGES.Home)}
         >
           UDCompass
         </button>
         <Search />
       </Navbar>
-      <div className="pt-20 w-full sm:max-w-[80%] mx-auto p-5">
+      <div className="app-page">
         <CurrentPage />
       </div>
     </div>

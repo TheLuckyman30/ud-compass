@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.app {
+  @apply w-screen 
+  min-h-screen 
+  bg-lightGray;
+}
+
+.app-main-button {
+  @apply font-medium 
+  cursor-pointer 
+  hover:scale-105 
+  duration-75;
+}
+
+.app-page {
+  @apply pt-20 
+  w-full sm:max-w-[80%] 
+  mx-auto 
+  p-5;
+}

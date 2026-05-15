@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.navbar {
+  @apply p-3 
+  fixed 
+  bg-ud-darkBlue 
+  text-white 
+  border-b-2 
+  border-b-ud-yellow 
+  w-screen 
+  z-10;
+}
+
+.nav-container {
+  @apply flex 
+  justify-center 
+  items-center 
+  w-full sm:max-w-7xl 
+  mx-auto 
+  gap-2;
+}
