@@ -51,6 +51,22 @@ Once the agent is fully deployed and accessible to users, further analysis will 
 ### Search Result
 ![Search Result](screenshots/search-result.png)
 
+### Figma Final Iteraction
+
+![Final Iteraction](screenshots/FinalIteration.png)
+
+### Figma Iteraction 3
+
+![Final Iteraction](screenshots/Iteration3.png)
+
+### Figma Iteraction 2
+
+![Final Iteraction](screenshots/Iteration2.png)
+
+### Figma Iteration 1
+
+![Final Iteraction](screenshots/Iteration1.png)
+
 # Installation & Running Locally
 Open your terminal and run
 ```
