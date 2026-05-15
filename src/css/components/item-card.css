@@ -1,0 +1,33 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.item-card {
+  @apply relative
+  bg-white
+  border
+  border-gray-200
+  p-5
+  shadow-sm
+  hover:shadow-lg
+  hover:border-ud-blue
+  hover:-translate-y-1
+  duration-150
+  cursor-pointer
+  flex
+  flex-col
+  justify-between
+  min-h-32;
+}
+
+.item-title {
+  @apply text-lg
+  font-semibold
+  text-gray-800;
+}
+
+.item-subtitle {
+  @apply text-sm
+  text-gray-500
+  italic
+  mt-2;
+}

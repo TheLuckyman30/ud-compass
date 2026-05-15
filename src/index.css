@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --color-ud-blue: #00539f;
-  --color-ud-darkBlue: #003c71;
-  --color-ud-yellow: #ffd300;
-  --color-ud-lightBlue: #0092cc;
-  --color-darkGray: #303030;
-  --color-lightGray: #eeeeee;
-  --color-gray: #555555;
-}
-
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;

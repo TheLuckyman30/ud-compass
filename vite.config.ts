@@ -12,6 +12,7 @@ export default defineConfig({
       "@data": path.resolve(__dirname, "./src/data"),
       "@components": path.resolve(__dirname, "./src/components/index.ts"),
       "@pages": path.resolve(__dirname, "./src/pages/index.ts"),
+      "@css": path.resolve(__dirname, "./src/css"),
     },
   },
   base: "/ud-compass/",

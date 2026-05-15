@@ -1,0 +1,40 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.category-card {
+  @apply bg-white 
+  h-50 
+  w-full 
+  border 
+  border-gray-200 
+  shadow-sm hover:shadow-lg 
+  hover:-translate-y-1 
+  duration-150 
+  cursor-pointer 
+  flex 
+  items-center 
+  justify-center 
+  text-center 
+  font-semibold 
+  text-xl 
+  text-gray-800 
+  overflow-hidden;
+}
+
+.content-container {
+  @apply flex 
+  items-center 
+  justify-center 
+  w-full
+  gap-5;
+}
+
+.svg {
+  @apply w-10 
+  h-10 
+  text-ud-blue;
+}
+
+.text {
+  @apply text-center;
+}

@@ -1,6 +1,7 @@
 import { useGeneralStoe } from "@utils/zustand";
-import type { Item } from "@utils/interfaces";
 import { PAGES } from "@utils/constants";
+import type { Item } from "@utils/interfaces";
+import "@css/components/item-card.css";
 
 interface ItemCardProps {
   item: Item;
@@ -12,14 +13,16 @@ export function ItemCard({ item }: ItemCardProps) {
 
   return (
     <div
-      className="bg-white rounded-sm border border-gray-400 px-5 py-10 shadow-md hover:scale-110 duration-75 cursor-pointer font-medium"
+      className="item-card"
       onClick={() => {
         setCurrentPage(PAGES.Resource);
         setSelectedItem(item);
       }}
     >
-      <p>{item.title}</p>
-      <p className="text-xs text-gray italic">{item.subtitle}</p>
+      <div>
+        <p className="item-title">{item.title}</p>
+        {item.subtitle && <p className="item-subtitle">{item.subtitle}</p>}
+      </div>
     </div>
   );
 }
