@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import type { Category, Item } from "../";
 import resources from "../../data/resources.json";
+import type { Category, Item } from "@utils/interfaces";
 
 interface GeneralStore {
   currentPage: number;

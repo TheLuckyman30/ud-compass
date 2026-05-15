@@ -1,5 +1,5 @@
-import { ItemInfo } from "../../components";
-import { useGeneralStoe } from "../../utils/zustand/general-store";
+import { ItemInfo } from "@components";
+import { useGeneralStoe } from "@utils/zustand";
 
 export function Resoruce() {
   const selectedItem = useGeneralStoe((state) => state.selectedItem);

@@ -1,4 +1,4 @@
-import type { Item } from "../utils";
+import type { Item } from "@utils/interfaces";
 
 interface ItemInfoProps {
   item: Item;

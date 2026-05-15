@@ -1,5 +1,5 @@
-import type { Item } from "../utils";
-import { useGeneralStoe } from "../utils/zustand/general-store";
+import { useGeneralStoe } from "@utils/zustand";
+import type { Item } from "@utils/interfaces";
 
 interface ItemCardProps {
   item: Item;

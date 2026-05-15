@@ -1,6 +1,6 @@
-import { Navbar, Search } from "./components";
-import { Category, Home, Resoruce } from "./pages";
-import { useGeneralStoe } from "./utils/zustand/general-store";
+import { Navbar, Search } from "@components";
+import { Home, Category, Resoruce } from "@pages";
+import { useGeneralStoe } from "@utils/zustand";
 import type { JSX } from "react";
 import "./App.css";
 

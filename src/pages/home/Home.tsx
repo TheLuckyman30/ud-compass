@@ -1,5 +1,5 @@
-import { CategoryCard } from "../../components";
-import resources from "../../data/resources.json";
+import { CategoryCard } from "@components";
+import resources from "@data/resources.json";
 
 export function Home() {
   return (

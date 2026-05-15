@@ -1,8 +1,8 @@
 import { Select } from "@mantine/core";
-import resources from "../data/resources.json";
-import type { Item } from "../utils";
+import resources from "@data/resources.json";
+import { useGeneralStoe } from "@utils/zustand";
+import type { Item } from "@utils/interfaces";
 import "@mantine/core/styles.css";
-import { useGeneralStoe } from "../utils/zustand/general-store";
 
 interface SearchItem {
   value: number;

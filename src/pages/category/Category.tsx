@@ -1,5 +1,5 @@
-import { ItemCard } from "../../components";
-import { useGeneralStoe } from "../../utils/zustand/general-store";
+import { ItemCard } from "@components";
+import { useGeneralStoe } from "@utils/zustand";
 
 export function Category() {
   const selectedCategory = useGeneralStoe((state) => state.selectedCategory);

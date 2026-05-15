@@ -1,5 +1,5 @@
-import type { Category } from "../utils";
-import { useGeneralStoe } from "../utils/zustand/general-store";
+import { useGeneralStoe } from "@utils/zustand";
+import type { Category } from "@utils/interfaces";
 
 interface CategoryCardProps {
   category: Category;
