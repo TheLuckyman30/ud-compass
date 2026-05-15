@@ -40,7 +40,7 @@ export function ItemCard({ item }: ItemCardProps) {
         </div>
         <div className="ic-icons">
           <div onClick={handleChanePage}>
-            <Info className="hover:scale-115 duration-150 cursor-pointer" />
+            <Info className="ic-info" />
           </div>
           <div onClick={handleFavUpdate}>
             <ColorHeart fillColor={isFavorited} />
