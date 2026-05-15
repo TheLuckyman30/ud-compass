@@ -23,9 +23,11 @@ Our project faced a few notable setbacks. The first being lacking access to the 
 \
 Our next major setback was unreliability with the AI agent. The agent produced significant hallucinations, particularly regarding link generation. This was a major obstacle, as unreliability with the chatbot made for inconsistent or unhelpful answers, and without knowing how it was generating the incorrect responses, it made it difficult to troubleshoot. In an effort to fix this, we have continually revised the agent’s instructions and gave varying input prompts in an attempt to better understand the nature of the issue.
 
-# Known Issues/Bugs
+# Known Issues/Bugs & Limitations
 - The copilot agent will give sometimes give non-working links
 - The search bar on the website currently has duplicate entries. This is due to the resources on MyUD appearing in multiple categories
+- The copilot agent is not currently implemented into the website, this is because:
+  - Authentication between the website and the copilot agent was not able to be setup properly
 
 # Future Work
 Further testing and troubleshooting of the agent will be necessary for a more reliable product. More work will need to be done to ensure the agent is referencing the knowledgebase it has been given rather than making assumptions from its general knowledgebase, as we believe this to be the root of many issues regarding link hallucinations.
@@ -58,14 +60,14 @@ The website will automatically deploy when there is a push to main. If you want 
 ### Webscraper 1
 - Python
 - Selenium
-- Repo Link: 
+- [Repo Link](https://github.com/crissao/Scraper)
 
 ### Webscraper 2
 - Node.js
 - TypeScript
 - Cheerio
 - Puppeteer
-- Repo Link:
+- Repo Link
 
 ## Copilot Agent
 - Microsoft Copilot Studio
@@ -80,4 +82,8 @@ The website will automatically deploy when there is a push to main. If you want 
 - Zustand (Global state management)
 
 # Important Folders/Files
-- ```/src/utils/zustand``` 
+- ```/src/utils/zustand``` Contains a zustand store for managing global state
+- ```/src/utils/helpers``` Contains a couple of helper functions for the application
+- ```/src/pages``` Contains all of the main page views
+- ```/src/components``` Contains all reusable UI components used throughout the application
+- ```/src/css``` Contains all of the stylesheets used across the application
