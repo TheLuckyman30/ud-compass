@@ -13,6 +13,7 @@
   hover:-translate-y-1
   duration-150
   min-h-32
+  h-full
   flex
   flex-col
   gap-5;
