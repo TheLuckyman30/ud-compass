@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.resource {
+  @apply flex flex-col gap-6
+  max-w-5xl
+  mx-auto
+  px-6 py-8;
+}
+
+.res-back {
+  @apply inline-flex 
+  items-center 
+  gap-2
+  font-medium
+  text-ud-darkBlue hover:text-ud-blue
+  cursor-pointer
+  w-fit
+  duration-150
+  hover:scale-110;
+}

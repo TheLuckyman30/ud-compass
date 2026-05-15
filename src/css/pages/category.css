@@ -1,0 +1,20 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.category {
+  @apply flex 
+  flex-col 
+  gap-5;
+}
+
+.cat-header {
+  @apply font-bold 
+  text-3xl 
+  text-gray;
+}
+
+.cat-items {
+  @apply grid 
+  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+  gap-10;
+}

@@ -1,15 +1,14 @@
-import { ItemCard } from "../../components";
-import { useGeneralStoe } from "../../utils/zustand/general-store";
+import { ItemCard } from "@components";
+import { useGeneralStoe } from "@utils/zustand";
+import "@css/pages/category.css";
 
 export function Category() {
   const selectedCategory = useGeneralStoe((state) => state.selectedCategory);
 
   return (
-    <section className="flex flex-col gap-5">
-      <p className="font-medium text-3xl text-gray">
-        {selectedCategory.name.toUpperCase()}
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <section className="category">
+      <p className="cat-header">{selectedCategory.name}</p>
+      <div className="cat-items">
         {selectedCategory.items.map((item) => (
           <ItemCard item={item} />
         ))}

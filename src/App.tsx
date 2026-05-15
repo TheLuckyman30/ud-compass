@@ -1,37 +1,25 @@
-import { Navbar, Search } from "./components";
-import { Category, Home, Resoruce } from "./pages";
-import { useGeneralStoe } from "./utils/zustand/general-store";
-import type { JSX } from "react";
+import { Navbar, Search } from "@components";
+import { useGeneralStoe } from "@utils/zustand";
+import { PAGES } from "@utils/constants";
 import "./App.css";
 
-interface Page {
-  name: string;
-  element: JSX.Element;
-}
-
-const pages: Page[] = [
-  { name: "Home", element: <Home /> },
-  { name: "Category", element: <Category /> },
-  { name: "Resource", element: <Resoruce /> },
-];
-
 function App() {
-  const currentPage = useGeneralStoe((state) => state.currentPage);
+  const CurrentPage = useGeneralStoe((state) => state.currentPage);
   const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
 
   return (
-    <div className="w-screen min-h-screen bg-lightGray">
+    <div className="app">
       <Navbar>
         <button
-          className="font-medium cursor-pointer hover:scale-105 duration-75"
-          onClick={() => setCurrentPage(0)}
+          className="app-main-button"
+          onClick={() => setCurrentPage(PAGES.Home)}
         >
           UDCompass
         </button>
         <Search />
       </Navbar>
-      <div className="pt-20 w-full sm:max-w-[80%] mx-auto px-5">
-        {pages[currentPage].element}
+      <div className="app-page">
+        <CurrentPage />
       </div>
     </div>
   );

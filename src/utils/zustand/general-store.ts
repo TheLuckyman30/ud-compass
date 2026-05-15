@@ -1,21 +1,23 @@
 import { create } from "zustand";
-import type { Category, Item } from "../";
 import resources from "../../data/resources.json";
+import type { Category, Item } from "@utils/interfaces";
+import type { JSX } from "react";
+import { PAGES } from "@utils/constants";
 
 interface GeneralStore {
-  currentPage: number;
+  currentPage: () => JSX.Element | null;
   selectedCategory: Category;
   selectedItem: Item;
-  setCurrentPage: (newPage: number) => void;
+  setCurrentPage: (newPage: () => JSX.Element | null) => void;
   setSelectedCategory: (newCategory: Category) => void;
   setSelectedItem: (newItem: Item) => void;
 }
 
 export const useGeneralStoe = create<GeneralStore>((set) => ({
-  currentPage: 0,
+  currentPage: PAGES.Home,
   selectedCategory: resources[0],
   selectedItem: resources[0].items[0],
-  setCurrentPage: (newPage: number) => {
+  setCurrentPage: (newPage: () => JSX.Element | null) => {
     set({ currentPage: newPage });
   },
   setSelectedCategory: (newCategory: Category) => {
