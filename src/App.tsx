@@ -1,22 +1,10 @@
 import { Navbar, Search } from "@components";
-import { Home, Category, Resoruce } from "@pages";
 import { useGeneralStoe } from "@utils/zustand";
-import type { JSX } from "react";
+import { PAGES } from "@utils/constants";
 import "./App.css";
 
-interface Page {
-  name: string;
-  element: JSX.Element;
-}
-
-const pages: Page[] = [
-  { name: "Home", element: <Home /> },
-  { name: "Category", element: <Category /> },
-  { name: "Resource", element: <Resoruce /> },
-];
-
 function App() {
-  const currentPage = useGeneralStoe((state) => state.currentPage);
+  const CurrentPage = useGeneralStoe((state) => state.currentPage);
   const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
 
   return (
@@ -24,14 +12,14 @@ function App() {
       <Navbar>
         <button
           className="font-medium cursor-pointer hover:scale-105 duration-75"
-          onClick={() => setCurrentPage(0)}
+          onClick={() => setCurrentPage(PAGES.Home)}
         >
           UDCompass
         </button>
         <Search />
       </Navbar>
       <div className="pt-20 w-full sm:max-w-[80%] mx-auto px-5">
-        {pages[currentPage].element}
+        <CurrentPage />
       </div>
     </div>
   );

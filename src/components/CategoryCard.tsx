@@ -1,5 +1,6 @@
 import { useGeneralStoe } from "@utils/zustand";
 import type { Category } from "@utils/interfaces";
+import { PAGES } from "@utils/constants";
 
 interface CategoryCardProps {
   category: Category;
@@ -16,7 +17,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
       className="bg-white text-center rounded-sm border border-gray-400 py-10 shadow-md hover:scale-110 duration-75 cursor-pointer font-medium"
       onClick={() => {
         setSelectedCategory(category);
-        setCurrentPage(1);
+        setCurrentPage(PAGES.Category);
       }}
     >
       {category.name}

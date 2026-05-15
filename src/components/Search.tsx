@@ -1,6 +1,7 @@
 import { Select } from "@mantine/core";
 import resources from "@data/resources.json";
 import { useGeneralStoe } from "@utils/zustand";
+import { PAGES } from "@utils/constants";
 import type { Item } from "@utils/interfaces";
 import "@mantine/core/styles.css";
 
@@ -29,7 +30,7 @@ export function Search() {
       const selectedItem = searchMap.get(value);
       if (selectedItem) {
         setSelectedItem(selectedItem);
-        setCurrentPage(2);
+        setCurrentPage(PAGES.Resource);
       }
     }
   };
