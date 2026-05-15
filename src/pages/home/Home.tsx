@@ -1,15 +1,18 @@
 import { CategoryCard } from "@components";
-import resources from "@data/resources.json";
+import { useGeneralStore } from "@utils/zustand";
 import "@css/pages/home.css";
 
 export function Home() {
+  const allCategories = useGeneralStore((state) => state.allCategories);
+  const categoryArray = Array.from(allCategories.values());
+
   return (
     <section className="home">
       <div className="h-cat-container">
         <p className="h-cat-header">Categories</p>
         <div className="h-categories">
-          {resources.map((resource) => (
-            <CategoryCard category={resource} />
+          {categoryArray.map((category) => (
+            <CategoryCard category={category} />
           ))}
         </div>
       </div>

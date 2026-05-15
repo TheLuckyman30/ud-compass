@@ -1,2 +1,2 @@
-export type { Item } from "./Item";
-export type { Category } from "./Category";
+export type * from "./Item";
+export type * from "./Category";

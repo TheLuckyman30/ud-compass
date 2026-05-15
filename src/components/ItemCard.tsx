@@ -1,4 +1,4 @@
-import { useGeneralStoe } from "@utils/zustand";
+import { useGeneralStore } from "@utils/zustand";
 import { PAGES } from "@utils/constants";
 import type { Item } from "@utils/interfaces";
 import "@css/components/item-card.css";
@@ -8,15 +8,15 @@ interface ItemCardProps {
 }
 
 export function ItemCard({ item }: ItemCardProps) {
-  const setSelectedItem = useGeneralStoe((state) => state.setSelectedItem);
-  const setCurrentPage = useGeneralStoe((state) => state.setCurrentPage);
+  const setSelectedItem = useGeneralStore((state) => state.setSelectedItem);
+  const setCurrentPage = useGeneralStore((state) => state.setCurrentPage);
 
   return (
     <div
       className="item-card"
       onClick={() => {
         setCurrentPage(PAGES.Resource);
-        setSelectedItem(item);
+        setSelectedItem(item.id);
       }}
     >
       <div>

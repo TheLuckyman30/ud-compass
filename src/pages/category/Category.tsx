@@ -1,15 +1,24 @@
 import { ItemCard } from "@components";
-import { useGeneralStoe } from "@utils/zustand";
+import { useGeneralStore } from "@utils/zustand";
+import { findItems } from "@utils/helpers";
 import "@css/pages/category.css";
 
 export function Category() {
-  const selectedCategory = useGeneralStoe((state) => state.selectedCategory);
+  const selectedCategoryId = useGeneralStore(
+    (state) => state.selectedCategoryId,
+  );
+  const allCategories = useGeneralStore((state) => state.allCategories);
+  const allItems = useGeneralStore((state) => state.allItems);
+  const category = allCategories.get(selectedCategoryId);
+
+  if (!category) return null;
+  const items = findItems(Array.from(category.items.values()), allItems);
 
   return (
     <section className="category">
-      <p className="cat-header">{selectedCategory.name}</p>
+      <p className="cat-header">{category.name}</p>
       <div className="cat-items">
-        {selectedCategory.items.map((item) => (
+        {items.map((item) => (
           <ItemCard item={item} />
         ))}
       </div>
