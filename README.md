@@ -29,6 +29,13 @@ Our next major setback was unreliability with the AI agent. The agent produced s
 - The copilot agent is not currently implemented into the website, this is because:
   - Authentication between the website and the copilot agent was not able to be setup properly
 
+# Project Visuals
+## ![Home Page]('/Users/kenpachi/Desktop/Screenshot 2026-05-15 at 11.23.41 AM.png')
+
+## ![Category Page]('/Users/kenpachi/Desktop/Screenshot 2026-05-15 at 11.24.05 AM.png')
+
+## ![Search Result]('/Users/kenpachi/Desktop/Screenshot 2026-05-15 at 11.25.03 AM.png')
+
 # Future Work
 Further testing and troubleshooting of the agent will be necessary for a more reliable product. More work will need to be done to ensure the agent is referencing the knowledgebase it has been given rather than making assumptions from its general knowledgebase, as we believe this to be the root of many issues regarding link hallucinations.
 \
