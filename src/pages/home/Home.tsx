@@ -18,6 +18,9 @@ export function Home() {
               {favItemsArray.map((item) => (
                 <ItemCard item={item} />
               ))}
+              {favItemsArray.length === 0 && (
+                <p className="h-no-fav-text">Nothing Favorited!</p>
+              )}
             </div>
           </div>
         </div>

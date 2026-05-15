@@ -19,12 +19,20 @@ interface GeneralStore {
 
 export const useGeneralStore = create<GeneralStore>((set) => {
   const [categoryMap, itemMap] = buildData();
+  const favItemKey = "udc-favoriteItems";
+  let initialFavItems: ItemMap | null = null;
+
+  const itemsFromStorage = localStorage.getItem(favItemKey);
+  if (itemsFromStorage) {
+    const favDataArray: [ItemId, Item][] = JSON.parse(itemsFromStorage);
+    initialFavItems = new Map(favDataArray);
+  }
 
   return {
     currentPage: PAGES.Home,
     allCategories: categoryMap,
     allItems: itemMap,
-    favoriteItems: new Map<ItemId, Item>(),
+    favoriteItems: initialFavItems ?? new Map<ItemId, Item>(),
     selectedCategoryId: "cat-0",
     selectedItemId: "item-0",
     setCurrentPage: (newPage: () => JSX.Element | null) => {
@@ -49,6 +57,11 @@ export const useGeneralStore = create<GeneralStore>((set) => {
             newFavoriteItems.set(itemId, item);
           }
         }
+
+        const convertedMap = JSON.stringify(
+          Array.from(newFavoriteItems.entries()),
+        );
+        localStorage.setItem(favItemKey, convertedMap);
 
         return { favoriteItems: newFavoriteItems };
       });
