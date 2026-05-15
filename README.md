@@ -29,16 +29,6 @@ Our next major setback was unreliability with the AI agent. The agent produced s
 - The copilot agent is not currently implemented into the website, this is because:
   - Authentication between the website and the copilot agent was not able to be setup properly
 
-# Project Visuals
-### Home Page
-![Home Page](screenshots/home-page.png)
-
-### Category Page
-![Category Page](screenshots/category-page.png)
-
-### Search Result
-![Search Result](screenshots/search-result.png)
-
 # Future Work
 Further testing and troubleshooting of the agent will be necessary for a more reliable product. More work will need to be done to ensure the agent is referencing the knowledgebase it has been given rather than making assumptions from its general knowledgebase, as we believe this to be the root of many issues regarding link hallucinations.
 \
@@ -50,6 +40,16 @@ Furthemore, the website does not contain a working version of our agent that we 
 \
 \
 Once the agent is fully deployed and accessible to users, further analysis will need to be conducted regarding user engagement, response accuracy, and feedback in order to identify areas of improvement and better meet the needs of users.
+
+# Project Visuals
+### Home Page
+![Home Page](screenshots/home-page.png)
+
+### Category Page
+![Category Page](screenshots/category-page.png)
+
+### Search Result
+![Search Result](screenshots/search-result.png)
 
 # Installation & Running Locally
 Open your terminal and run
