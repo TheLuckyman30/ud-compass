@@ -77,7 +77,7 @@ The website will automatically deploy when there is a push to main. If you want 
 - TypeScript
 - Cheerio
 - Puppeteer
-- [Repo Link] (https://github.com/TheLuckyman30/ud-web-scraper)
+- [Repo Link](https://github.com/TheLuckyman30/ud-web-scraper)
 
 ## Copilot Agent
 - Microsoft Copilot Studio
