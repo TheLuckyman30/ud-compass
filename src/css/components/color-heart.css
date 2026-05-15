@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+@reference "@css/themes/color-themes.css";
+
+.heart {
+  @apply text-ud-blue 
+  cursor-pointer
+  hover:scale-120
+  duration-150;
+}

@@ -12,7 +12,6 @@
   hover:border-ud-blue
   hover:-translate-y-1
   duration-150
-  cursor-pointer
   min-h-32
   flex
   flex-col
@@ -32,17 +31,9 @@
   mt-2;
 }
 
-.ic-heart {
-  @apply w-5 
-  h-5 
-  cursor-pointer 
-  transition-colors;
-}
-
-.ic-base {
-  @apply text-gray-400;
-}
-
-.ic-favorited {
-  @apply text-ud-blue;
+.ic-icons {
+  @apply flex 
+  gap-3
+  w-full 
+  justify-end;
 }

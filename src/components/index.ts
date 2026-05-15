@@ -3,3 +3,4 @@ export { CategoryCard } from "./CategoryCard";
 export { ItemCard } from "./ItemCard";
 export { ItemInfo } from "./ItemInfo";
 export { Search } from "./Search";
+export { ColorHeart } from "./ColorHeart";
